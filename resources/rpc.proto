@@ -205,6 +205,13 @@ message ChangePasswordRequest {
     daemon.
     */
     bytes new_password = 2;
+
+    /**
+    new_macaroon_root_key is an optional argument instructing the daemon to
+    rotate the macaroon root key when set to true. This will invalidate all
+    previously generated macaroons.
+    */
+    bool new_macaroon_root_key = 3;
 }
 message ChangePasswordResponse {}
 
