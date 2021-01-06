@@ -108,6 +108,7 @@ async function changePassword(currentPassword, newPassword) {
   const rpcPayload = {
     current_password: currentPasswordBuff,
     new_password: newPasswordBuff,
+    new_macaroon_root_key: false,
   };
 
   const conn = await initializeRPCClient();
